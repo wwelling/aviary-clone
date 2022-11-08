@@ -14,7 +14,7 @@
     "watch": "ng build --watch --configuration development",
     "pretest": "npm run build:axiom-elements",
     "test": "ng test",
-    "clean": "rimraf ./dist",
+    "clean": "rimraf ./dist && rimraf ./logs",
     "predevelop": "npm run clean",
     "develop": "concurrently \"npm run build:axiom-elements:watch\" \"wait-on ./dist/axiom-elements/public-api.d.ts && ng serve --watch\"",
     "prebuild:axiom-components:watch": "npm run clean",
@@ -50,10 +50,14 @@
     "@nguniversal/express-engine": "^14.2.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
+    "env-var": "^7.3.0",
     "express": "^4.18.2",
+    "nest-winston": "^1.8.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.5.7",
     "tslib": "^2.4.1",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1",
     "zone.js": "~0.11.8"
   },
   "peerDependencies": {

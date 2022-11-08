@@ -6,6 +6,15 @@
 /out-tsc
 /bazel-out
 
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
 # Node
 /node_modules
 npm-debug.log
@@ -46,3 +55,5 @@ Thumbs.db
 yarn.lock
 
 SECRETS.md
+
+docker/
