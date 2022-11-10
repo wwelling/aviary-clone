@@ -82,7 +82,7 @@ export class AppModule {
   }
 
   ngDoBootstrap() {
-    const styleSheet = document.styleSheets[0]
+    const styleSheet = document.styleSheets[0];
     const cssRules = styleSheet.cssRules;
 
     const elementRef = document.getElementsByTagName('body')[0];
@@ -104,10 +104,12 @@ export class AppModule {
       // state machine for css rules needed here
       for (let ri = 0; ri < cssRules.length; ++ri) {
         const rule = cssRules[ri];
-        style.innerHTML += rule.cssText;
-        // console.log(ri, rule, `allowed? ${componentsAllowed.indexOf((rule as CSSStyleRule).selectorText)}`);
-        if (componentsAllowed.indexOf((rule as CSSStyleRule).selectorText)) {
 
+        console.log(ri, rule, `allowed? ${componentsAllowed.indexOf((rule as CSSStyleRule).selectorText)}`);
+        var include = true; // componentsAllowed.indexOf((rule as CSSStyleRule).selectorText)
+
+        if (include) {
+          style.innerHTML += rule.cssText;
         }
       }
 
@@ -118,7 +120,6 @@ export class AppModule {
       // we know this is a element
       console.log(`watch`, $event);
     });
-
 
     this.onBootstrap();
 

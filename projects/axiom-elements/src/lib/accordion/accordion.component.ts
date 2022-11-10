@@ -9,4 +9,8 @@ import { ComponentSpyComponent } from '../component-spy/component-spy.component'
 })
 export class AccordionComponent extends ComponentSpyComponent {
 
+  getAllowedRules() {
+    return [''];
+  }
+
 }
