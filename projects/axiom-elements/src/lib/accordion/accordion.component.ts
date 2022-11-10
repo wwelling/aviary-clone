@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { ComponentSpyComponent } from '../component-spy/component-spy.component';
 
 @Component({
   selector: 'axiom-accordion',
@@ -6,4 +7,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./accordion.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom,
 })
-export class AccordionComponent { }
+export class AccordionComponent extends ComponentSpyComponent {
+
+}

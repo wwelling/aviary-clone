@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/scss/bootstrap.scss"
             ],
             "scripts": []
           },
@@ -225,7 +226,7 @@
             "main": "projects/axiom-components/src/main.ts",
             "tsConfig": "projects/axiom-components/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "/components/",
+            "baseHref": "/",
             "singleBundle": true,
             "keepPolyfills": false,
             "keepStyles": false,
